@@ -4,11 +4,16 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Dashboard} from "./pages/dashboard/dashboard"
 import {Etudiants} from "./pages/etudiants/etudiants"
+import { Auth } from "./pages/auth/auth";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Dashboard/>,
+    path: "/auth",
+    element: <Auth/>,
+  },
+  {
+    path:'/',
+    element:<Dashboard/>
   },
   {
     path:"/etudiants",
