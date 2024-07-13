@@ -1,0 +1,99 @@
+.student-info-container {
+    
+}
+
+.student-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 35px;
+}
+
+.student-img-info {
+  display: flex;
+  justify-content: center;
+}
+
+.student-img-container {
+  display: grid;
+  text-align: center;
+  width: 150px;
+}
+
+.student-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.dark-t {
+  color: black;
+}
+h1 {
+  margin: 0;
+  color: #333;
+}
+
+.student-basic-info p {
+  margin: 5px 0;
+  color: #666;
+  line-height: 2.2;
+}
+
+.tabbar {
+  display: flex;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.tabbar a {
+  background: var(--primary-400);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  flex: 1;
+  font-size: 16px;
+  border-radius: 0;
+  text-align: center;
+  color: black;
+  transition: color 0.3s;
+}
+button:focus{
+    outline: none;
+}
+.tabbar .tab1{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.tabbar .tab4{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.tabbar a.active,
+.tabbar a:hover {
+  color: var(--primary);
+  background-color:#fff ;
+}
+
+.info-content {
+  padding-top: 20px;
+}
+
+.tab-content {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tab-content h2 {
+  color: #007bff;
+}

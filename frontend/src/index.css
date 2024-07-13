@@ -2,12 +2,56 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   --primary: #04c5b2;
+  --secondary: #04c5b2;
+  --primary-50: #effefb;
+  --primary-100: #c7fff5;
+  --primary-200: #90ffeb;
+  --primary-300: #50f8df;
+  --primary-400: #1de4cd;
+  --primary-500: #04c5b2;
+  --primary-600: #00a195;
+  --primary-700: #058077;
+  --primary-800: #0a6561;
+  --primary-900: #0d5450;
+  --primary-950: #003333;
+  --white-primary: #fff;
+  --white-secondary: #f5f5f5;
+  --dark-primary: #121212;
+  --dark-secondary: #4b4b4b;
+  --dark: #000;
+
+  --gray-light: #f3f4f6;
+  --gray: #64748b;
+  --gray-dark: #111827;
+
+  --info-light: #d2e9fe;
+  --info: #2071fc;
+  --info-dark: #0a2c92;
+
+  --warning-light: #fef9cb;
+  --warning: #fcce00;
+  --warning-dark: #926f00;
+
+  --success-light: #e9fbd6;
+  --success: #73b215;
+  --success-dark: #346706;
+
+  --danger-light: #ffe5d9;
+  --danger: #ff4248;
+  --danger-dark: #93153a;
+
+  --radius: 20px;
+
+  --head-column-color: rgb(107, 107, 107);
+  --marginNav: 0;
+  --marginTop: 0;
 }
 
 a {
@@ -22,8 +66,6 @@ a:hover {
 body {
   margin: 0;
 }
-
-
 
 button {
   border-radius: 8px;
@@ -44,3 +86,25 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.flex {
+  display: flex;
+}
+
+.form-container {
+  display: grid;
+  gap: 12px;
+  width: 358px;
+}
+
+.filter-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.bg-white-shadow {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,33 @@
+:root {
+  --large: 280px;
+  --resized: 68px;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: var(--large) 1fr;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+  background-color: var(--white-secondary);
+  padding: 12px;
+  gap: 12px;
+
+  &.resized-sidebar {
+    grid-template-columns: var(--resized) 1fr;
+  }
+}
+
+.side-bar-fixed {
+  position: fixed;
+  height: calc(100vh - 25px);
+  width: var(--large);
+  transition: all 0.3s ease;
+
+  &.resized-sidebar {
+    width: var(--resized);
+  }
+}
+
+.app-container main {
+  overflow: hidden;
+}

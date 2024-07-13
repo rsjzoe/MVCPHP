@@ -1,0 +1,126 @@
+.side-bar-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+.side-bar {
+  background-color: var(--white-primary);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  padding: 12px;
+  border-radius: var(--radius);
+  white-space: nowrap;
+
+  .between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  .brand {
+    display: flex;
+    gap: 2px;
+    padding: 8px;
+    overflow-x: hidden;
+
+    .logo {
+      width: 50px;
+      height: 48px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+      &.resized {
+        width: 42px;
+        height: 37px;
+      }
+    }
+  }
+
+  .toggle {
+    position: absolute;
+    right: -9px;
+    top: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    background-color: var(--primary-100);
+
+    border-radius: 9999px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--primary-200);
+    }
+  }
+
+  .nav-list {
+    display: grid;
+    gap: 10px;
+    margin-top: 24px;
+    overflow-x: hidden;
+
+    .nav-link {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px;
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      color: var(--dark-secondary);
+
+      .nav-icon {
+        width: 24px;
+        height: 24px;
+      }
+
+      &.active {
+        color: var(--primary);
+        background-color: var(--primary-50);
+      }
+
+      &:hover {
+        background-color: var(--primary-50);
+      }
+    }
+  }
+
+  .logout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px 0;
+    gap: 8px;
+    overflow: hidden;
+
+    a {
+      button {
+        width: 100%;
+      }
+    }
+
+    &.resized {
+      button {
+        padding: 8px 0;
+      }
+    }
+  }
+}
+
+/* .side-bar .nav-list .nav-link.active::before {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    background-color: var(--primary);
+} */

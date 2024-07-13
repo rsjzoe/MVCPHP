@@ -1,0 +1,141 @@
+.table-wrapper {
+    display: grid;
+    gap: 12px;
+
+    .btn-add-container {
+        display: flex;
+        justify-content: end;
+    }
+
+    .table-container {
+        border-radius: 10px;
+        /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15); */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: var(--white-primary);
+        overflow-x: auto;
+        position: relative;
+
+        &.success {
+            th {
+                background-color: var(--success-light);
+            }
+        }
+        &.danger {
+            th {
+                background-color: var(--danger-light);
+            }
+        }
+        &.info {
+            th {
+                background-color: var(--info-light);
+            }
+        }
+        &.warning {
+            th {
+                background-color: var(--warning-light);
+            }
+        }
+
+        thead {
+            box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+
+            th {
+                font-size: 18px;
+                /* background-color: var(--danger-light); */
+                /* background-color: transparent;
+                color: var(--danger); */
+                line-height: 1.4;
+                text-align: left;
+                padding: 18px;
+            }
+        }
+
+        tbody {
+            tr {
+                cursor: pointer;
+            }
+        }
+
+        tr {
+            border-bottom: 1px solid #f2f2f2;
+
+            &:hover {
+                background-color: var(--gray-light);
+            }
+
+            .car-table {
+                display: flex;
+                width: 150px;
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+
+            .action-container {
+                display: flex;
+                align-items: center;
+                width: min-content;
+                gap: 4px;
+
+                .action {
+                    position: relative;
+                    cursor: pointer;
+
+                    &::before {
+                        display: block;
+                        position: absolute;
+                        position: absolute;
+                        bottom: -15px;
+                        left: -70%;
+                        background-color: var(--dark-secondary);
+                        color: var(--white-primary);
+                        padding: 0 4px;
+                        border-radius: 12px;
+                        font-size: 14px;
+                    }
+
+                    &.edit {
+                        color: var(--info);
+
+                        &:hover {
+                            &::before {
+                                content: "Modifier";
+                            }
+                        }
+                    }
+
+                    &.delete {
+                        color: var(--danger);
+
+                        &:hover {
+                            &::before {
+                                content: "Effacer";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        td {
+            color: var(--dark-secondary);
+            line-height: 1.4;
+            padding: 16px;
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+    }
+}
+table {
+    width: max-content;
+    min-width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
