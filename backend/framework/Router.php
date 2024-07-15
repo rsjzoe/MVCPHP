@@ -40,6 +40,11 @@ class Router
 
         foreach ($this->routes as $route) {
             if ($route['method'] === $method && preg_match($this->convertToRegex($route['uri']), $uri, $matches)) {
+                // print_r($this->convertToRegex($route['uri']));
+                // print_r("\n");
+                // print_r($uri);
+                // print_r("\n");
+                // print_r($matches);
                 array_shift($matches);
                 if (is_callable($route['callback'])) {
                     call_user_func($route['callback'], $matches);
@@ -68,21 +73,27 @@ class Router
         }
 
         $controllerObject = new $controller();
-        
+
         if (!method_exists($controllerObject, $method)) {
             http_response_code(404);
             echo "Method $method not found.";
             return;
         }
-        
+
         $reflector = new ReflectionMethod($controller, $method);
         $parameters = $reflector->getParameters();
         $args = [];
 
         foreach ($parameters as $parameter) {
-            $paramType = $parameter->getType() ? $parameter->getType()->getName() : null;
-            if ($paramType === Request::class) {
+            $paramName = $parameter->getType() ? $parameter->getType()->getName() : null;
+    
+            if ($paramName === Request::class) {
                 $args[] = new Request();
+            } elseif ($paramName && class_exists($paramName)) {
+                $model = new $paramName();
+                $args[] = $model->find(array_shift($matches));
+            } elseif (!empty($matches)) {
+                $args[] = array_shift($matches);
             } else {
                 // TODO : handle other types of parameters
                 $args[] = null;
@@ -95,6 +106,9 @@ class Router
 
     private function getUri()
     {
+        // print_r($_SERVER['REQUEST_URI']);
+        // print_r("\n");
+        // TODO : fix put method
         $uri = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
         return '/' . $uri;
     }

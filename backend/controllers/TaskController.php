@@ -30,20 +30,21 @@ class TaskController
         return Response::json($task);        
     }
 
-    public function edit()
+    public function edit($id)
     {
-        $task = Task::find($_GET['id']);
+        $task = Task::find($id);
         return Response::views("task/edit", [
             "task" => $task
         ]);
     }
 
-    public function update()
+    public function update(Request $request, Task $task)
     {
-        $task = Task::find($_POST['id']);
-        $task->title = $_POST['title'];
-        $task->description = $_POST['description'];
-        $task->save();
+        var_dump($task);
+        // $task = Task::find($_POST['id']);
+        // $task->title = $_POST['title'];
+        // $task->description = $_POST['description'];
+        // $task->save();
 
         return Response::redirect("/tasks");
     }
