@@ -1,0 +1,27 @@
+.calendar-container {
+    margin-top: 20px;
+}
+  
+.rbc-calendar {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+/* Style pour les boutons de navigation */
+.rbc-btn-group button {
+    background-color: var(--primary-400); /* Couleur de fond des boutons */
+    color: white; /* Couleur du texte des boutons */
+    border: none; /* Supprime la bordure par défaut */
+    padding: 10px; /* Ajuste le padding pour une meilleure apparence */
+    margin: 5px; /* Ajoute un peu d'espace entre les boutons */
+    border-radius: 5px; /* Arrondit les coins des boutons */
+    cursor: pointer; /* Change le curseur lors du survol */
+}
+  
+.rbc-btn-group button:hover {
+    background-color: var(--primary-600);
+}
+  
+.rbc-btn-group button:focus {
+    outline: none; /* Supprime le contour de focus par défaut */
+}

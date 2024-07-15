@@ -1,0 +1,72 @@
+.infoGenerale{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.nombreClasse{
+    width: 22%;
+    text-align: center;
+    border-radius: 15px;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--white-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nombreEleve{
+    width: 22%;
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--white-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.TitreNombre{
+    width: 100%;
+    font-weight: lighter;
+    text-align: center;
+    align-items: center;
+    font-family: cursive;
+    background-color: var(--primary-400);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: var(--white-primary);
+}
+
+.nombre{
+    font-size: 20px;
+    text-align: center;
+}
+
+.calendrier{
+    margin-top: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.state{
+    display: flex;
+    justify-content: space-around;
+}
+
+.diagramme{
+    width: 30%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--white-primary);
+    margin-top: 2%;
+}
+
+.courbe{
+    width: 65%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--white-primary);
+    margin-top: 2%;
+}
